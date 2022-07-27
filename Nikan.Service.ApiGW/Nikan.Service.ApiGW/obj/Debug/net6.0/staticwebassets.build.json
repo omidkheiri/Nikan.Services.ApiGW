@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "abhb9GM5WG/fmzHWPsODeXj83FpiL5svKa2qOW/MiuE=",
+  "Source": "Nikan.Service.ApiGW",
+  "BasePath": "_content/Nikan.Service.ApiGW",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
