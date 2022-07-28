@@ -3,6 +3,17 @@
     "BaseUrl": "http://localhost:5062"
   },
   "Routes": [
-
+    {
+      "UpstreamPathTemplate": "/GW/company/{companyid}/account",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/company/{companyid}/account",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ]
+    }
   ]
 }
