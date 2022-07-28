@@ -3,6 +3,65 @@
     "BaseUrl": "http://localhost:5062"
   },
   "Routes": [
-
+    {
+      "UpstreamPathTemplate": "/GW/Account/V1/company/{companyid}/account",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/V1/company/{companyid}/account",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/GW/Account/V1/GW/company/{companyid}/account/{accountid}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/V1/company/{companyid}/account/{accountid}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/GW/Account/V1/GW/company/{companyid}/account/{accountid}",
+      "UpstreamHttpMethod": [ "PUT" ],
+      "DownstreamPathTemplate": "/V1/company/{companyid}/account/{accountid}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/GW/Account/V1/GW/company/{companyid}/account",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/V1/company/{companyid}/account",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/GW/Account/V1/GW/company/{companyid}/account/{accountid}",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "DownstreamPathTemplate": "/V1/company/{companyid}/account/{accountid}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ]
+    }
   ]
 }
