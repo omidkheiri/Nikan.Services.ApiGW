@@ -10,44 +10,44 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5103
+          "Host": "crmprofile-clusterip-srv",
+          "Port": 80
         }
       ]
     },
     {
-      "UpstreamPathTemplate": "/GW/Account/V1/GW/company/{companyid}/account/{accountid}",
+      "UpstreamPathTemplate": "/GW/Account/V1/company/{companyid}/account/{accountid}",
       "UpstreamHttpMethod": [ "GET" ],
       "DownstreamPathTemplate": "/V1/company/{companyid}/account/{accountid}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5103
+          "Host": "crmprofile-clusterip-srv",
+          "Port": 80
         }
       ]
     },
     {
-      "UpstreamPathTemplate": "/GW/Account/V1/GW/company/{companyid}/account/{accountid}",
+      "UpstreamPathTemplate": "/GW/Account/V1/company/{companyid}/account/{accountid}",
       "UpstreamHttpMethod": [ "PUT" ],
-      "DownstreamPathTemplate": "/V1/company/{companyid}/account/{accountid}",
+      "DownstreamPathTemplate": "/V1/Company/{companyid}/Accoutn/{accountid}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5103
+          "Host": "crmprofile-clusterip-srv",
+          "Port": 80
         }
       ]
     },
     {
-      "UpstreamPathTemplate": "/GW/Account/V1/GW/company/{companyid}/account",
+      "UpstreamPathTemplate": "/GW/Account/V1/company/{companyid}/account",
       "UpstreamHttpMethod": [ "GET" ],
-      "DownstreamPathTemplate": "/V1/company/{companyid}/account",
+      "DownstreamPathTemplate": "/V1/Company/{companyid}/account",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5103
+          "Host": "reports-clusterip-srv",
+          "Port": 80
         }
       ]
     },
