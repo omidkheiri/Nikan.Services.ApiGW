@@ -51,6 +51,7 @@
         }
       ]
     },
+
     {
       "UpstreamPathTemplate": "/GW/Account/V1/GW/company/{companyid}/account/{accountid}",
       "UpstreamHttpMethod": [ "DELETE" ],
@@ -60,6 +61,128 @@
         {
           "Host": "localhost",
           "Port": 5103
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/GW/ServiceLocation/V1/Company/{companyid}/Account/{accountid}/ServiceLocation/{servicelocationid}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/V1/Company/{companyid}/Account/{accountid}/ServiceLocation/{servicelocationid}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "service-catalog-clusterip-srv",
+          "Port": 80
+        }
+      ]
+    },
+
+    {
+      "UpstreamPathTemplate": "/GW/ServiceLocation/V1/Company/{companyid}/ServiceLocation",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/V1/Company/{companyid}/ServiceLocation",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "service-catalog-clusterip-srv",
+          "Port": 80
+        }
+      ]
+    },
+
+    {
+      "UpstreamPathTemplate": "/GW/ServiceLocation/V1/Company/{companyid}/ServiceLocation",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/V1/Company/{companyid}/ServiceLocation",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "service-catalog-clusterip-srv",
+          "Port": 80
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/GW/ServiceLocation/V1/Company/{companyid}/ServiceLocation/{servicelocation}",
+      "UpstreamHttpMethod": [ "PUT" ],
+      "DownstreamPathTemplate": "/V1/Company/{companyid}/ServiceLocation/{servicelocation}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "service-catalog-clusterip-srv",
+          "Port": 80
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/GW/ServiceLocation/V1/Company/{companyid}/Account/{accountid}/ServiceLocation/{servicelocationid}",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "DownstreamPathTemplate": "/V1/Company/{companyid}/Account/{accountid}/ServiceLocation/{servicelocationid}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "service-catalog-clusterip-srv",
+          "Port": 80
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/GW/ServiceLine/V1/Company/{CompanyId}/Account/{AccountId}/ServiceLine/{ServiceLineId}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/V1/Company/{CompanyId}/Account/{AccountId}/ServiceLine/{ServiceLineId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "service-catalog-clusterip-srv",
+          "Port": 80
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/GW/ServiceLine/V1/Company/{CompanyId}/Account/{AccountId}/ServiceLine",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/V1/Company/{CompanyId}/Account/{AccountId}/ServiceLine",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "service-catalog-clusterip-srv",
+          "Port": 80
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/GW/ServiceLine/V1/Company/{CompanyId}/Account/{AccountId}/ServiceLine",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamPathTemplate": "/V1/Company/{CompanyId}/Account/{AccountId}/ServiceLine",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "service-catalog-clusterip-srv",
+          "Port": 80
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/GW/ServiceLine/V1/Company/{CompanyId}/Account/{AccountId}/ServiceLine/{ServiceLineId}",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "DownstreamPathTemplate": "/V1/Company/{CompanyId}/Account/{AccountId}/ServiceLine/{ServiceLineId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "service-catalog-clusterip-srv",
+          "Port": 80
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/GW/ServiceLine/V1/Company/{CompanyId}/Account/{AccountId}/ServiceLine/{ServiceLineId}",
+      "UpstreamHttpMethod": [ "PUT" ],
+      "DownstreamPathTemplate": "/V1/Company/{CompanyId}/Account/{AccountId}/ServiceLine/{ServiceLineId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "service-catalog-clusterip-srv",
+          "Port": 80
         }
       ]
     }
