@@ -128,7 +128,7 @@
     },
     {
       "UpstreamPathTemplate": "/GW/ServiceLine/V1/Company/{CompanyId}/Account/{AccountId}/ServiceLine/{ServiceLineId}",
-      "UpstreamHttpMethod": [ "Get" ],
+      "UpstreamHttpMethod": [ "GET" ],
       "DownstreamPathTemplate": "/V1/Company/{CompanyId}/Account/{AccountId}/ServiceLine/{ServiceLineId}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
@@ -139,9 +139,9 @@
       ]
     },
     {
-      "UpstreamPathTemplate": "/GW/ServiceLine/V1/Company/{CompanyId}/Account/{AccountId}/ServiceLine",
-      "UpstreamHttpMethod": [ "Get" ],
-      "DownstreamPathTemplate": "/V1/Company/{CompanyId}/Account/{AccountId}/ServiceLine",
+      "UpstreamPathTemplate": "/GW/ServiceLine/V1/Company/{CompanyId}/ServiceLine",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/V1/Company/{CompanyId}/ServiceLine",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -152,7 +152,7 @@
     },
     {
       "UpstreamPathTemplate": "/GW/ServiceLine/V1/Company/{CompanyId}/Account/{AccountId}/ServiceLine",
-      "UpstreamHttpMethod": [ "Post" ],
+      "UpstreamHttpMethod": [ "POST" ],
       "DownstreamPathTemplate": "/V1/Company/{CompanyId}/Account/{AccountId}/ServiceLine",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
@@ -174,10 +174,47 @@
         }
       ]
     },
+
+    {
+      "UpstreamPathTemplate": "/GW/ServiceLine/V1/Company/{CompanyId}/ServiceTypes",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/V1/Company/{CompanyId}/ServiceTypes",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "service-catalog-clusterip-srv",
+          "Port": 80
+        }
+      ]
+    },
     {
       "UpstreamPathTemplate": "/GW/ServiceLine/V1/Company/{CompanyId}/Account/{AccountId}/ServiceLine/{ServiceLineId}",
       "UpstreamHttpMethod": [ "PUT" ],
       "DownstreamPathTemplate": "/V1/Company/{CompanyId}/Account/{AccountId}/ServiceLine/{ServiceLineId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "service-catalog-clusterip-srv",
+          "Port": 80
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/GW/ServiceLine/V1/Company/{CompanyId}/Account/{AccountId}/ServiceLine/{ServiceLine}/ServiceLinePrice",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/V1/Company/{CompanyId}/Account/{AccountId}/ServiceLine/{ServiceLine}/ServiceLinePrice",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "service-catalog-clusterip-srv",
+          "Port": 80
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/GW/ServiceLine/V1/Company/{CompanyId}/Account/{AccountId}/ServiceLine/{ServiceLine}/ServiceLinePrice/{servicelinepriceid}",
+      "UpstreamHttpMethod": [ "PUt" ],
+      "DownstreamPathTemplate": "/V1/Company/{CompanyId}/Account/{AccountId}/ServiceLine/{ServiceLine}/ServiceLinePrice/{servicelinepriceid}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
