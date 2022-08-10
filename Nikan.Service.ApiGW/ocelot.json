@@ -222,6 +222,54 @@
           "Port": 80
         }
       ]
+    },
+    {
+      "UpstreamPathTemplate": "/GW/FlightNumbers/V1/Company/{CompanyId}/FlightNumber",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/V1/Company/{CompanyId}/FlightNumber",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "service-catalog-clusterip-srv",
+          "Port": 80
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/GW/FlightNumbers/V1/Company/{CompanyId}/FlightNumber/{FlightNumberId}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/V1/Company/{CompanyId}/FlightNumber/{FlightNumberId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "service-catalog-clusterip-srv",
+          "Port": 80
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/GW/FlightNumbers/V1/Company/{CompanyId}/FlightNumber/{FlightNumberId}",
+      "UpstreamHttpMethod": [ "Put" ],
+      "DownstreamPathTemplate": "/V1/Company/{CompanyId}/FlightNumber/{FlightNumberId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "service-catalog-clusterip-srv",
+          "Port": 80
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/GW/FlightNumbers/V1/Company/{CompanyId}/FlightNumber/{FlightNumberId}",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamPathTemplate": "/V1/Company/{CompanyId}/FlightNumber/{FlightNumberId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "service-catalog-clusterip-srv",
+          "Port": 80
+        }
+      ]
     }
   ]
 }
