@@ -4,6 +4,66 @@
   },
   "Routes": [
     {
+      "UpstreamPathTemplate": "/GW/Account/V1/company/{companyid}/account/{accountid}/contact/",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/V1/company/{companyid}/account/{accountid}/contact/",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "crmprofile-clusterip-srv",
+          "Port": 80
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/GW/Account/V1/company/{companyid}/account/{accountid}/contact/{contactid}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/V1/company/{companyid}/account/{accountid}/contact/{contactid}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "crmprofile-clusterip-srv",
+          "Port": 80
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/GW/Account/V1/company/{companyid}/contact/{contactid}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/V1/company/{companyid}/contact/{contactid}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "crmprofile-clusterip-srv",
+          "Port": 80
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/GW/Account/V1/company/{companyid}/account/{accountid}/contact/{contactid}",
+      "UpstreamHttpMethod": [ "PUT" ],
+      "DownstreamPathTemplate": "/V1/company/{companyid}/account/{accountid}/contact/{contactid}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "crmprofile-clusterip-srv",
+          "Port": 80
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/GW/Account/V1/company/{companyid}/account/{accountid}/contact",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/V1/company/{companyid}/account/{accountid}/contact",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "crmprofile-clusterip-srv",
+          "Port": 80
+        }
+      ]
+    },
+    {
       "UpstreamPathTemplate": "/GW/Account/V1/company/{companyid}/account",
       "UpstreamHttpMethod": [ "POST" ],
       "DownstreamPathTemplate": "/V1/company/{companyid}/account",
@@ -46,6 +106,31 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
+          "Host": "crmprofile-clusterip-srv",
+          "Port": 80
+        }
+      ]
+    },
+
+    {
+      "UpstreamPathTemplate": "/GW/Report/V1/company/{companyid}/account",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/V1/Company/{companyid}/account",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "reports-clusterip-srv",
+          "Port": 80
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/GW/Report/V1/company/{companyid}/contact",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/V1/Company/{companyid}/contact",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
           "Host": "reports-clusterip-srv",
           "Port": 80
         }
@@ -65,6 +150,10 @@
       ]
     },
     {
+      "FileCacheOptions": {
+        "TtlSeconds": 15,
+        "Region": "ServiceLocation"
+      },
       "UpstreamPathTemplate": "/GW/ServiceLocation/V1/Company/{companyid}/Account/{accountid}/ServiceLocation/{servicelocationid}",
       "UpstreamHttpMethod": [ "GET" ],
       "DownstreamPathTemplate": "/V1/Company/{companyid}/Account/{accountid}/ServiceLocation/{servicelocationid}",
@@ -77,6 +166,22 @@
       ]
     },
 
+    {
+      "FileCacheOptions": {
+        "TtlSeconds": 15,
+        "Region": "ServiceLocation"
+      },
+      "UpstreamPathTemplate": "/GW/ServiceLocation/V1/Company/{companyid}/ServiceLocation/{servicelocationid}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/V1/Company/{companyid}/ServiceLocation/{servicelocationid}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "service-catalog-clusterip-srv",
+          "Port": 80
+        }
+      ]
+    },
     {
       "UpstreamPathTemplate": "/GW/ServiceLocation/V1/Company/{companyid}/ServiceLocation",
       "UpstreamHttpMethod": [ "POST" ],
@@ -151,6 +256,18 @@
       ]
     },
     {
+      "UpstreamPathTemplate": "/GW/ServiceLine/V1/Company/{CompanyId}/ServiceLine/Location/{locationid}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/V1/Company/{CompanyId}/ServiceLine/Location/{locationid}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "service-catalog-clusterip-srv",
+          "Port": 80
+        }
+      ]
+    },
+    {
       "UpstreamPathTemplate": "/GW/ServiceLine/V1/Company/{CompanyId}/Account/{AccountId}/ServiceLine",
       "UpstreamHttpMethod": [ "POST" ],
       "DownstreamPathTemplate": "/V1/Company/{CompanyId}/Account/{AccountId}/ServiceLine",
@@ -200,6 +317,18 @@
       ]
     },
     {
+      "UpstreamPathTemplate": "/GW/ServiceLine/V1/Company/{CompanyId}/Account/{AccountId}/ServiceLine/{ServiceLineId}/UpdateSchema",
+      "UpstreamHttpMethod": [ "PUT" ],
+      "DownstreamPathTemplate": "/V1/Company/{CompanyId}/Account/{AccountId}/ServiceLine/{ServiceLineId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "service-catalog-clusterip-srv",
+          "Port": 80
+        }
+      ]
+    },
+    {
       "UpstreamPathTemplate": "/GW/ServiceLine/V1/Company/{CompanyId}/Account/{AccountId}/ServiceLine/{ServiceLine}/ServiceLinePrice",
       "UpstreamHttpMethod": [ "POST" ],
       "DownstreamPathTemplate": "/V1/Company/{CompanyId}/Account/{AccountId}/ServiceLine/{ServiceLine}/ServiceLinePrice",
@@ -236,6 +365,18 @@
       ]
     },
     {
+      "UpstreamPathTemplate": "/GW/FlightNumbers/V1/Company/{CompanyId}/FlightNumber/SelectList",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/V1/Company/{CompanyId}/FlightNumber/SelectList",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "service-catalog-clusterip-srv",
+          "Port": 80
+        }
+      ]
+    },
+    {
       "UpstreamPathTemplate": "/GW/FlightNumbers/V1/Company/{CompanyId}/FlightNumber/{FlightNumberId}",
       "UpstreamHttpMethod": [ "Get" ],
       "DownstreamPathTemplate": "/V1/Company/{CompanyId}/FlightNumber/{FlightNumberId}",
@@ -260,13 +401,169 @@
       ]
     },
     {
-      "UpstreamPathTemplate": "/GW/FlightNumbers/V1/Company/{CompanyId}/FlightNumber/{FlightNumberId}",
+      "UpstreamPathTemplate": "/GW/FlightNumbers/V1/Company/{CompanyId}/FlightNumber",
       "UpstreamHttpMethod": [ "Post" ],
-      "DownstreamPathTemplate": "/V1/Company/{CompanyId}/FlightNumber/{FlightNumberId}",
+      "DownstreamPathTemplate": "/V1/Company/{CompanyId}/FlightNumber",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
           "Host": "service-catalog-clusterip-srv",
+          "Port": 80
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/GW/FlightNumbers/V1/Company/{CompanyId}/AirlineName",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamPathTemplate": "/V1/Company/{CompanyId}/AirlineName",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "service-catalog-clusterip-srv",
+          "Port": 80
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/GW/FlightNumbers/V1/Company/{CompanyId}/AirlineName",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/V1/Company/{CompanyId}/AirlineName",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "service-catalog-clusterip-srv",
+          "Port": 80
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/GW/FlightNumbers/V1/Company/{CompanyId}/AirlineName/{AirlineNameId}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/V1/Company/{CompanyId}/AirlineName/{AirlineNameId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "service-catalog-clusterip-srv",
+          "Port": 80
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/GW/FlightNumbers/V1/Company/{CompanyId}/AirlineName/{AirlineNameId}",
+      "UpstreamHttpMethod": [ "Put" ],
+      "DownstreamPathTemplate": "/V1/Company/{CompanyId}/AirlineName/{AirlineNameId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "service-catalog-clusterip-srv",
+          "Port": 80
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/GW/FlightNumbers/V1/Company/{CompanyId}/AirlineName/{AirlineNameId}",
+      "UpstreamHttpMethod": [ "Delete" ],
+      "DownstreamPathTemplate": "/V1/Company/{CompanyId}/AirlineName/{AirlineNameId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "service-catalog-clusterip-srv",
+          "Port": 80
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/GW/Reserve/V1/Company/{CompanyId}/Reserve",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamPathTemplate": "/V1/Company/{CompanyId}/Reserve",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "reserve-clusterip-srv",
+          "Port": 80
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/GW/Reserve/V1/Company/{CompanyId}/Reserve",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/V1/Company/{CompanyId}/Reserve",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "reserve-clusterip-srv",
+          "Port": 80
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/GW/Reserve/V1/Company/{CompanyId}/Reserve/{reserveid}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/V1/Company/{CompanyId}/Reserve/{reserveid}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "reserve-clusterip-srv",
+          "Port": 80
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/GW/Reserve/V1/Company/{CompanyId}/Reserve/{reserveid}",
+      "UpstreamHttpMethod": [ "PUT" ],
+      "DownstreamPathTemplate": "/V1/Company/{CompanyId}/Reserve/{reserveid}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "reserve-clusterip-srv",
+          "Port": 80
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/GW/Financial/V1/Company/{CompanyId}/FinancialAccount/{accountid}/Credit",
+      "UpstreamHttpMethod": [ "get" ],
+      "DownstreamPathTemplate": "/V1/Company/{CompanyId}/FinancialAccount/{accountid}/Credit",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "financial-clusterip-srv",
+          "Port": 80
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/GW/Financial/V1/Company/{CompanyId}/FinancialAccount/{accountid}",
+      "UpstreamHttpMethod": [ "get" ],
+      "DownstreamPathTemplate": "/V1/Company/{CompanyId}/FinancialAccount/{accountid}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "financial-clusterip-srv",
+          "Port": 80
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/GW/Financial/V1/Company/{CompanyId}/FinancialAccount/{accountid}/Credit",
+      "UpstreamHttpMethod": [ "post" ],
+      "DownstreamPathTemplate": "/V1/Company/{CompanyId}/FinancialAccount/{accountid}/Credit",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "financial-clusterip-srv",
+          "Port": 80
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/GW/Financial/V1/Company/{CompanyId}/BankPayment/{contactid}",
+      "UpstreamHttpMethod": [ "post" ],
+      "DownstreamPathTemplate": "/V1/Company/{CompanyId}/BankPayment/{contactid}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "financial-clusterip-srv",
           "Port": 80
         }
       ]
